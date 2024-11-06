@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Minha Primeira Página</title>  
+
+        <style>
+ .polaroid {
+  width: 300px; /* largura da imagem */
+  height: 200px; /* altura da imagem */
+  border: 100px solid #fff; /* borda branca */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* sombra */
+  transform: rotate(360deg); /* rotação ligeira */
+  transition: transform 2.0s; /* transição suave */
+}
+
+.polaroid:hover {
+  transform: rotate(10deg); /* rotação mais acentuada ao passar o mouse */
+}
+
+.polaroid img {
+  width: 100%; /* largura da imagem */
+  height: 100%; /* altura da imagem */
+  border-radius: 10px; /* cantos arredondados */
+  object-fit: cover; /* imagem cobre toda a área */
+}
+          
+.pulsar {
+  animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+  .fogos {
+  position: relative;
+  overflow: hidden;
+}
+
+.fogos::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fogos 2s infinite;
+}
+
+@keyframes fogos {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+
+.fogos::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  animation: fogos2 2s infinite;
+}
+
+@keyframes fogos2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.fogos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+        </style>    
+
+
+
+    </head>
+    <body>
+        <div class="polaroid pulsar fogos" >
+            <img src="sao paulo.png" alt="Sua imagem">
+          </div>
+
+     
+        
+
+    </body>
+</html>
